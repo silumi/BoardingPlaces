@@ -1,0 +1,28 @@
+
+<div class="container px-lg-5">
+<div class="row">
+    <div class="mt-2 col-12">
+        <button class="btn btn-success">New Boarding</button>
+    </div>
+
+</div>
+<hr>
+<div class="row">
+    <div class="mt-2 col-12">
+      
+        <a href="#" class="list-group-item clearfix" *ngFor="let boarding of boardings">
+            <div class="float-left">
+                <p>Monthly charge: {{boarding.Price}} <br>
+                Contact: {{boarding.mobile}}<br>
+               Distance: {{boarding.distance}}</p>
+            </div>
+            <span class="float-right">
+                <img [src]="boarding.imagePath" alt="" class="image-responsive" style="max-height: 100px;">
+
+            </span>
+       
+    </a>
+
+</div>
+</div>
+</div>

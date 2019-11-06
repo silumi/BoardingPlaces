@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Boarding } from '../boarding.model';
 
 @Component({
   selector: 'app-boarding-details',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./boarding-details.component.css']
 })
 export class BoardingDetailsComponent implements OnInit {
-
+@Input() boarding: Boarding;
   constructor() { }
 
   ngOnInit() {

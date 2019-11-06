@@ -1,6 +1,7 @@
 <div class="row">
-    <div class="col-12">
-        <img src="" alt="" class="img-responsive">
+    <div class="mt-5 col-12">
+        <img [src]="boarding.imagePath" alt="{{boarding.owner}}" class="img-responsive"
+        style="max-height: 300px;">
     </div>
 </div>
 <div class="row">
@@ -20,7 +21,7 @@
       </button>
       <ul class="dropdown-menu">
         <li><a  style="cursor: pointer"
-          >Boarding Place</a></li>
+          >To Boarding Place</a></li>
    <li><a class="dropdown-item" style="cursor: pointer">Edit Boarding</a></li>
    <li><a class="dropdown-item" style="cursor: pointer">Delete Boarding</a></li>
       </ul>
@@ -29,36 +30,36 @@
 </div>
 <div class="row">
     <div class="col-12">
-        desc
+       {{boarding.description}}
     </div>
 </div>
 <div class="row">
 <div class="col-12">
-    price
+    {{boarding.Price}}
 </div>
 </div>
 <div class="row">
 <div class="col-12">
-mobile
+{{boarding.mobile}}
 </div>
 </div>
 <div class="row">
 <div class="col-12">
-    address
+    {{boarding.address}}
  </div>
 </div>
 <div class="row">
  <div class="col-12">
-    distance
+    {{boarding.distance}}
 </div>
  </div>
  <div class="row">
 <div class="col-12">
-            key money
+            {{boarding.keyMoney}}
 </div>
 </div>
 <div class="row">
 <div class="col-12">
-    owner
+    {{boarding.owner}}
 </div>
 </div>

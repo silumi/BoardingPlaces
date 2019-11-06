@@ -1,11 +1,15 @@
 <!-- <div class="container"> -->
         <div class="row">
 <div class="col-md-5">
-    <app-boarding-list></app-boarding-list>
+    <app-boarding-list
+    (boardingWasSelected)="selectedBoarding=$event"></app-boarding-list>
 </div>
 
 <div class="col-md-7">
-    <app-boarding-details></app-boarding-details>
+    <app-boarding-details
+    *ngIf="selectedBoarding; else infotext"
+    [boarding]= "selectedBoarding"></app-boarding-details>
+    <ng-template #infotext><p>Select a boarding!</p></ng-template>
 </div>
 </div>
 <!-- </div> -->

@@ -1,4 +1,7 @@
-<app-header></app-header>
+<app-header (featureSelected)="onNavigate($event)"></app-header>
 <div class="col-md-12">
-<app-boarding></app-boarding>
+<app-boarding *ngIf="loadedFeature==='boarding'"></app-boarding>
+</div>
+<div class="col-md-12">
+    <app-foods *ngIf="loadedFeature!== 'boarding'"></app-foods>
 </div>

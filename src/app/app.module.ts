@@ -11,6 +11,9 @@ import { BoardingItemsComponent } from './boarding/boarding-list/boarding-items/
 import { HeaderComponent } from './header/header.component';
 import { FoodsComponent } from './Food/foods/foods.component';
 import { NewBoardingComponent } from './boarding/new-boarding/new-boarding.component';
+import { DropdownDirective } from './dropdown.directive';
+import { BoardingSaveComponent } from './boarding/boarding-save/boarding-save.component';
+import { BoardingService } from './boarding/Boarding.service';
 
 
 @NgModule({
@@ -23,14 +26,16 @@ import { NewBoardingComponent } from './boarding/new-boarding/new-boarding.compo
     BoardingItemsComponent,
     HeaderComponent,
     FoodsComponent,
-    NewBoardingComponent
+    NewBoardingComponent,
+    DropdownDirective,
+    BoardingSaveComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [BoardingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

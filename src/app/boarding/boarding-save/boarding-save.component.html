@@ -1,0 +1,20 @@
+<div class="row">
+        <div class="col-7">
+            <app-boarding-edit></app-boarding-edit>
+            <hr>
+            <ul>
+              <a
+                class="list-group-item clearfix"
+                style="cursor: pointer"
+                *ngFor="let boarding of boardings">
+                {{ boarding.Price }} <br> {{ boarding.mobile}} <br> {{boarding.address}}
+                <br> {{boarding.description}} <br> {{boarding.distance}} <br> {{boarding.keyMoney}} <br> {{boarding.owner}}
+                <span class="float-right">
+                  <img [src]="boarding.imagePath" alt="" class="image-responsive" style="max-height: 30px;">
+          </span>
+
+              </a>
+            </ul>
+        </div>
+    </div>
+    

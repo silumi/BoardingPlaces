@@ -12,22 +12,23 @@
 <div class="row">
     <div class="col-12">
     <div
-      class="btn-group" appDropdown> 
+      class="btn-group" appDropdown #r='appDropDown'> 
        <button
         type="button"
         class="btn btn-primary dropdown-toggle"
-        data-toggle="dropdown" >
+        data-toggle="dropdown">
         Manage Boarding <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu">
-        <li><a  style="cursor: pointer"
+      <ul class="dropdown-menu" [ngClass]="{'show': r.isOpen}">
+        <li><a  class="dropdown-item" style="cursor: pointer"
           >To Boarding Place</a></li>
-   <li><a class="dropdown-item" style="cursor: pointer">Edit Boarding</a></li>
-   <li><a class="dropdown-item" style="cursor: pointer">Delete Boarding</a></li>
+   <li><a class="dropdown-item" style="cursor: pointer" href="#">Edit Boarding</a></li>
+   <li><a class="dropdown-item" style="cursor: pointer" href="#">Delete Boarding</a></li>
       </ul>
+    </div> 
     </div>
-  </div>
 </div>
+
 <div class="row">
     <div class="col-12">
        {{boarding.description}}

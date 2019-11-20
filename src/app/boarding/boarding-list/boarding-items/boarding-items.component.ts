@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Boarding } from '../../boarding.model';
+import { BoardingService } from '../../Boarding.service';
 
 
 @Component({
@@ -10,13 +11,12 @@ import { Boarding } from '../../boarding.model';
 export class BoardingItemsComponent implements OnInit {
 @Input() boarding: Boarding;
 // @Output() boardingSelected = new EventEmitter<void>();
-@Output() boardingSelected = new EventEmitter <void>();
 
-  constructor() { }
+  constructor(private boardingservice: BoardingService) { }
 
   ngOnInit() {
   }
 onSelected() {
-this.boardingSelected.emit();
+this.boardingservice.boardingSelected.emit(this.boarding);
 }
 }

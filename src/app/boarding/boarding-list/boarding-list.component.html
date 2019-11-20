@@ -2,7 +2,7 @@
 <div class="container px-lg-5">
 <div class="row">
     <div class="mt-2 col-12">
-        <button class="btn btn-success">New Boarding</button>
+        <button class="btn btn-success" (click)="onNewBoarding()">New Boarding</button>
     </div>
 
 </div>
@@ -10,8 +10,9 @@
 <div class="row">
     <div class="mt-2 col-12">
 <app-boarding-items
-*ngFor="let boarding of boardings"
-[boarding]="boarding"></app-boarding-items>
+*ngFor="let boarding of boardings; let i = index"
+[boarding]="boarding"
+[index] = "i"></app-boarding-items>
 </div>
 </div>
 </div>

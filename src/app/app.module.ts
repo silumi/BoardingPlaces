@@ -14,6 +14,7 @@ import { NewBoardingComponent } from './boarding/new-boarding/new-boarding.compo
 import { DropdownDirective } from './dropdown.directive';
 import { BoardingSaveComponent } from './boarding/boarding-save/boarding-save.component';
 import { BoardingService } from './boarding/Boarding.service';
+import { BoardingStartComponent } from './boarding/boarding-start/boarding-start.component';
 
 
 @NgModule({
@@ -28,12 +29,14 @@ import { BoardingService } from './boarding/Boarding.service';
     FoodsComponent,
     NewBoardingComponent,
     DropdownDirective,
-    BoardingSaveComponent
+    BoardingSaveComponent,
+    BoardingStartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [BoardingService],
   bootstrap: [AppComponent]

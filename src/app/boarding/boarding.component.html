@@ -5,10 +5,11 @@
 </div>
 
 <div class="col-md-7">
-    <app-boarding-details
+    <!-- <app-boarding-details
     *ngIf="selectedBoarding; else infotext"
     [boarding]= "selectedBoarding"></app-boarding-details>
-    <ng-template #infotext><p>Select a boarding!</p></ng-template>
+    <ng-template #infotext><p>Select a boarding!</p></ng-template> -->
+    <router-outlet></router-outlet>
 </div>
 </div>
 <app-boarding-save></app-boarding-save>

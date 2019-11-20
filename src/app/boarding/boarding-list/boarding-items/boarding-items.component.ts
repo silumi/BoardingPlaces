@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Boarding } from '../../boarding.model';
-import { BoardingService } from '../../Boarding.service';
+
 
 
 @Component({
@@ -10,13 +10,9 @@ import { BoardingService } from '../../Boarding.service';
 })
 export class BoardingItemsComponent implements OnInit {
 @Input() boarding: Boarding;
+@Input() index: number;
 // @Output() boardingSelected = new EventEmitter<void>();
-
-  constructor(private boardingservice: BoardingService) { }
-
   ngOnInit() {
   }
-onSelected() {
-this.boardingservice.boardingSelected.emit(this.boarding);
-}
+
 }

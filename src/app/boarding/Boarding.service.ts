@@ -15,6 +15,9 @@ export class BoardingService {
     getBoardings() {
         return this.boardings.slice();
     }
+    getBoarding(index: number) { // routing
+        return this.boardings[index];
+    }
     addBoarding(boarding: Boarding) {
         this.boardings.push(boarding);
         this.boardingChanged.emit(this.boardings.slice());

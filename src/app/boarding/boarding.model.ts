@@ -1,5 +1,5 @@
 export class Boarding {
-public Price: string;
+public price: string;
 public mobile: string;
 public address: string;
 public distance: string;
@@ -9,7 +9,7 @@ public keyMoney: string;
 public owner: string;
 
 constructor(price: string, phone: string, address: string, distance: string, desc: string, imgPath: string, key: string, owner: string) {
-this.Price = price;
+this.price = price;
 this.mobile = phone;
 this.address = address;
 this.distance = distance;

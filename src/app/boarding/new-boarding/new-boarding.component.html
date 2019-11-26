@@ -1,1 +1,107 @@
-<h1>work</h1>
+<div class="row">
+    <div class="mt-2 col-12">
+        <form [formGroup]="boardingForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-success" type="submit" [disabled]="!boardingForm.valid" >Save</button>
+                    <button class="btn btn-danger" type="button" (click)="onCancel()">Cancel</button>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="OwnerName">Owner Name</label>
+                        <input type="text" id="OwnerName"
+                        formControlName="owner" 
+                        class="form-control">
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="image-path">Image URL</label>
+                        <input type="text" id="image-path" 
+                        formControlName="imagePath"
+                        class="form-control"
+                        #imagePath>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <img [src]="imagePath.value" class="img-responsive"
+                    style="max-height: 500px;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="text" id="price" 
+                        formControlName="price"
+                        class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea type="text" id="description" class="form-control"
+                        formControlName="description"
+                        rows="4"></textarea>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" class="form-control"
+                        formControlName="mobile">
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="distance">Distance from NSBM</label>
+                        <input type="text" id="distance"
+                        formControlName="distance"
+                        class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" class="form-control"
+                        formControlName="address"
+                        >
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="keyMoney">Key Money</label>
+                        <input type="text" id="key Money" class="form-control"
+                        formControlName="keyMoney">
+                    </div>
+                </div>
+
+            </div>
+            
+        </form>
+    </div>
+
+</div>

@@ -28,5 +28,8 @@ id: number;
   onEditBoarding() {
     this.router.navigate(['edit'], {relativeTo: this.route});
   }
-
+  onDeleteBoarding(){
+    this.boardingService.deleteBoarding(this.id);
+    this.router.navigate(['/boardings'])
+  }
 }

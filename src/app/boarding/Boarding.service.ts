@@ -1,9 +1,9 @@
 import { Boarding } from './boarding.model';
-import { EventEmitter } from '@angular/core';
+import { Subject } from 'rxjs';
 
 export class BoardingService {
-    boardingChanged = new EventEmitter<Boarding[]>();
-    public boardingSelected = new EventEmitter <Boarding> ();
+   boardingChanged = new Subject<Boarding[]>();
+    // public boardingSelected = new EventEmitter <Boarding> ();
 
     private boardings: Boarding[] = [
         new Boarding ('Rs.5000', '0714774883', 'Ratnapura', '8km', 'Comfortable bed room with attach bath rooms',
@@ -20,10 +20,19 @@ export class BoardingService {
     }
     addBoarding(boarding: Boarding) {
         this.boardings.push(boarding);
-        this.boardingChanged.emit(this.boardings.slice());
+        this.boardingChanged.next(this.boardings.slice());
       }
+    updateBoarding(index: number, newBoarding: Boarding){
+        this.boardings[index] = newBoarding;
+        this.boardingChanged.next(this.boardings.slice());
+    }
     addBoardings(boardings: Boarding[]) {
         this.boardings.push(...boardings);
-        this.boardingChanged.emit(this.boardings.slice());
+        this.boardingChanged.next(this.boardings.slice());
       }
+    deleteBoarding(index: number){
+        this.boardings.splice(index, 1);
+        this.boardingChanged.next(this.boardings.slice());
+
+    }
 }

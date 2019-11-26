@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Boarding } from './boarding.model';
 import { BoardingService } from './Boarding.service';
 
 @Component({
@@ -9,16 +8,9 @@ import { BoardingService } from './Boarding.service';
   providers: [BoardingService]
 })
 export class BoardingComponent implements OnInit {
-selectedBoarding: Boarding;
-  constructor(private boardingservice: BoardingService ) { }
+  constructor() { }
 
   ngOnInit() {
-    this.boardingservice.boardingSelected
-      .subscribe(
-        (boarding: Boarding) => {
-          this.selectedBoarding = boarding;
-        }
-      );
   }
 
 }

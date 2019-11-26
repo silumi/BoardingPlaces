@@ -4,7 +4,7 @@ import { BoardingComponent } from './boarding/boarding.component';
 import { FoodsComponent } from './Food/foods/foods.component';
 import { BoardingStartComponent } from './boarding/boarding-start/boarding-start.component';
 import { BoardingDetailsComponent } from './boarding/boarding-details/boarding-details.component';
-import { BoardingEditComponent } from './boarding/boarding-edit/boarding-edit.component';
+
 import { NewBoardingComponent } from './boarding/new-boarding/new-boarding.component';
 
 
